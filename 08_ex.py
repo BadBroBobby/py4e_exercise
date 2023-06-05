@@ -1,1 +1,2 @@
 #Exercises
+print('Hello World!')
