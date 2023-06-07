@@ -2,30 +2,15 @@ import os
 import string
 
 file = input('Enter filename: ')
-# Få den aktuelle sti til 08_ex.py-filen
-current_dir = os.path.dirname(os.path.abspath(__file__))
 
-# Konstruer stien til materials-mappen baseret på den aktuelle sti
-materials_dir = os.path.join(current_dir, "../materials")
-
-# Tilgå filen i materials-mappen
-file_path = os.path.join(materials_dir, file)
 
 while True :
     try :
-        file_handle = open( file_path)
+        file_handle = open( file)
         break
     except :
         print('Incorrect file path. Try again')
         file = input('Enter filename: ')
-        # Få den aktuelle sti til 08_ex.py-filen
-        current_dir = os.path.dirname(os.path.abspath(__file__))
-
-        # Konstruer stien til materials-mappen baseret på den aktuelle sti
-        materials_dir = os.path.join(current_dir, "../materials")
-
-        # Tilgå filen i materials-mappen
-        file_path = os.path.join(materials_dir, file)
         continue
 
 """ 
